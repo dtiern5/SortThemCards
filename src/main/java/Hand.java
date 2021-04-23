@@ -22,17 +22,19 @@ public class Hand implements Comparable<Hand> {
         }
     }
     
+    // stream?
     public int compareTo(Hand other) {
         int sum = 0;
         int otherSum = 0;
+        
         for (Card card : hand) {
             sum += card.getValue();
         }
+        
         for (Card card : other.hand) {
             otherSum += card.getValue();
         }
+        
         return sum - otherSum;
-        
-        
     }
 }
