@@ -7,6 +7,6 @@ public class BySuitInValueOrder implements Comparator<Card> {
         if (c1.getSuit() == c2.getSuit()) {
             return c1.getValue() - c2.getValue();
         }
-        return c1.getSuit().ordinal() - c2.getSuit().ordinal();
+        return c1.getSuit().compareTo(c2.getSuit());
     }
 }
