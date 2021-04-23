@@ -22,6 +22,10 @@ public class Hand implements Comparable<Hand> {
         }
     }
     
+    public void sortBySuit() {
+        Collections.sort(hand, new BySuitInValueOrder());
+    }
+    
     // stream?
     public int compareTo(Hand other) {
         int sum = 0;

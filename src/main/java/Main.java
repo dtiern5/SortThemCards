@@ -2,22 +2,21 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-
 public class Main {
 
     public static void main(String[] args) {
         // test your code here
-        ArrayList<Card> cards = new ArrayList<>();
+        Hand hand = new Hand();
 
-        cards.add(new Card(3, Suit.SPADE));
-        cards.add(new Card(2, Suit.DIAMOND));
-        cards.add(new Card(14, Suit.SPADE));
-        cards.add(new Card(12, Suit.HEART));
-        cards.add(new Card(2, Suit.SPADE));
+        hand.add(new Card(12, Suit.HEART));
+        hand.add(new Card(4, Suit.SPADE));
+        hand.add(new Card(2, Suit.DIAMOND));
+        hand.add(new Card(14, Suit.SPADE));
+        hand.add(new Card(7, Suit.HEART));
+        hand.add(new Card(2, Suit.SPADE));
 
- 
-        Collections.sort(cards, new SortBySuit());
+        hand.sortBySuit();
 
-        cards.stream().forEach(c -> System.out.println(c));
+        hand.print();
     }
 }
